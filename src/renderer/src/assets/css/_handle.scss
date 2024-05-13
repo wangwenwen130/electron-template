@@ -1,0 +1,56 @@
+@for $weight from 1 through 9 {
+  .f-weight-#{$weight*100} {
+    font-weight: 100 * $weight;
+  }
+}
+
+// font-size
+@for $size from 12 through 100 {
+  .f-size-#{$size} {
+    font-size: 1px * $size;
+  }
+}
+
+// margin
+@for $var from 1 through 100 {
+  .m-top-#{$var * 2} {
+    margin-top: 2px * $var;
+  }
+}
+@for $var from 1 through 100 {
+  .m-bottom-#{$var * 2} {
+    margin-bottom: 2px * $var;
+  }
+}
+@for $var from 1 through 100 {
+  .m-left-#{$var * 2} {
+    margin-left: 2px * $var;
+  }
+}
+@for $var from 1 through 100 {
+  .m-right-#{$var * 2} {
+    margin-right: 2px * $var;
+  }
+}
+
+// padding
+@for $var from 1 through 100 {
+  .p-top-#{$var * 2} {
+    padding-top: 2px * $var;
+  }
+}
+@for $var from 1 through 100 {
+  .p-bottom-#{$var * 2} {
+    padding-bottom: 2px * $var;
+  }
+}
+@for $var from 1 through 100 {
+  .p-right-#{$var * 2} {
+    padding-right: 2px * $var;
+  }
+}
+@for $var from 1 through 100 {
+  .p-left-#{$var * 2} {
+    padding-left: 2px * $var;
+  }
+}
