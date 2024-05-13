@@ -1,24 +1,10 @@
-import { Loading, Close, Plus, Warning, Check, Search } from '@element-plus/icons-vue'
+import type { App } from 'vue'
+import { Check, Close, Loading, Plus, RefreshRight } from '@element-plus/icons-vue'
 
-import topHeader from './topHeader/index.vue'
-import ProtocolDialog from './protocolDialog/index.vue'
-import animation from './animation/index.vue'
-import audioPlay from './audioPlay/index.vue'
-
-export default {
-  install(app) {
-    // icon
-    app.component('Loading', Loading)
-    app.component('Close', Close)
-    app.component('Plus', Plus)
-    app.component('Check', Check)
-    app.component('Search', Search)
-    app.component('Warning', Warning)
-
-    // com
-    app.component('TopHeader', topHeader)
-    app.component('ProtocolDialog', ProtocolDialog)
-    app.component('Animation', animation)
-    app.component('AudioPlay', audioPlay)
-  }
+export const setupIcons = (app: App) => {
+  app.component('Close', Close)
+  app.component('Check', Check)
+  app.component('Loading', Loading)
+  app.component('Plus', Plus)
+  app.component('RefreshRight', RefreshRight)
 }

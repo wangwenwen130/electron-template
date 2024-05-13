@@ -31,7 +31,7 @@ export const logService = {
 
   createWirteFile(filePath, content) {
     // 这里创建代表又过了一天 需要展示旧的日志
-    const [origin] = unitTime(30)
+    const [origin] = unitTime(31)
     const fileName = logService.getFileName(origin)
     logService.deleteFile(fileName)
     fileService.mkdirsSync(path.dirname(filePath))

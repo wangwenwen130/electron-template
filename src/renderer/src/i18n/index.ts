@@ -1,28 +1,20 @@
+import type { App } from 'vue'
 import { createI18n } from 'vue-i18n'
-import zhCN from './lang/zh-CN'
-import enUS from './lang/en-US'
-import { localSet } from '@/utils/index'
-
-export const textLanguage = {
-  cn: '中文',
-  en: 'English'
-}
-
-export const messages = {
-  cn: zhCN,
-  en: enUS
-}
+import en from './lang/en-US'
+import zhCn from './lang/zh-CN'
 
 const i18n = createI18n({
-  legacy: false,
-  locale: 'cn',
-  globalInjection: true,
-  messages
+  locale: 'zh-CN',
+  messages: {
+    en,
+    'zh-CN': zhCn
+  }
 })
 
-export const setLanguage = (lang: keyof typeof textLanguage) => {
-  i18n.global.locale.value = lang
-  localSet('language', lang)
+export const setupI18n = (app: App) => {
+  app.use(i18n)
 }
 
-export default i18n
+export const $t = (key: string) => {
+  return i18n.global.t(key)
+}

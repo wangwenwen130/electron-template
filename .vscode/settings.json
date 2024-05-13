@@ -8,5 +8,9 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "npm-scripts.showStartNotification": false
+  "npm-scripts.showStartNotification": false,
+  "i18n-ally.localesPaths": [
+    "src/renderer/src/i18n",
+    "src/renderer/src/i18n/lang"
+  ]
 }
