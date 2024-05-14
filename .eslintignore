@@ -3,3 +3,6 @@ dist
 out
 vite-css-plugin.ts
 .gitignore
+.eslintrc-auto-import.json
+components.d.ts
+auto-imports.d.ts

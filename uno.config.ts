@@ -10,11 +10,19 @@ export default defineConfig({
       warn: true,
       prefix: ['i-'],
       extraProperties: {
-        display: 'inline-block'
+        display: 'inline-block',
+        'vertical-align': 'middle'
       },
       collections: {
-        icon: FileSystemIconLoader('/src/assets/icons'),
-        images: FileSystemIconLoader('/src/assets/images')
+        icon: FileSystemIconLoader('src/renderer/src/assets/icons'),
+        image: FileSystemIconLoader('src/renderer/src/assets/images')
+      },
+      customizations: {
+        customize(props) {
+          props.width = '2em'
+          props.height = '2em'
+          return props
+        }
       }
     }),
     presetAttributify(),

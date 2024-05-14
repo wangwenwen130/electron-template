@@ -54,22 +54,24 @@ export default defineConfig({
       eslintrc: {
         enabled: true
       },
-      dirs: ['src/preload/src/stores/**', 'src/preload/src/hooks/**']
+      dirs: ['src/renderer/src/stores', 'src/renderer/src/hooks']
     }),
     Components({
       resolvers: [ElementPlusResolver()],
       extensions: ['vue', 'tsx'],
       dts: true,
       deep: true,
-      dirs: ['src/preload/src/components', 'src/preload/src/business']
+      dirs: ['src/renderer/src/components', 'src/renderer/src/business']
     })],
+    base: './',
     resolve: {
       alias: {
-        '@renderer': resolve('src/renderer/src'),
         '@': resolve('src/renderer/src'),
+        '~/package': resolve(__dirname, './package.json'),
         'src': resolve('src/'),
         'main': resolve('src/main/')
-      }
+      },
+      extensions: [ '.js', '.json','.vue', '.ts', '.tsx']
     }
   }
 })

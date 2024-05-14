@@ -8,6 +8,10 @@ export const isDef = <T = unknown>(val?: T): val is T => {
   return typeof val !== 'undefined'
 }
 
+export const isFormData = (val: unknown): val is FormData => {
+  return is(val, 'FormData')
+}
+
 export const isUnDef = <T = unknown>(val?: T): val is T => {
   return !isDef(val)
 }
